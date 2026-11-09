@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" data-cover="neworder">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pedro's 50th with Substance</title>
+<meta name="description" content="Save the date: Saturday 23 January 2027.">
+<meta property="og:title" content="Pedro's 50th with Substance">
+<meta property="og:description" content="Save the date: Saturday 23 January 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Cormorant+Garamond:wght@400;500&family=Turret+Road:wght@500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script>
+  try { var c = localStorage.getItem("cover"); if (c) document.documentElement.dataset.cover = c; } catch (e) {}
+</script>
+<style>
+  [data-cover="neworder"] { --bg:#ffffff; --fg:#111111; --muted:#6b6b6b; --line:#e2e2e2; --accent:#111111; --btn-bg:#111111; --btn-fg:#ffffff; --head-font:'Bodoni Moda', Didot, serif; --body-font:Inter, system-ui, sans-serif; }
+  [data-cover="joydivision"] { --bg:#6e6e6e; --fg:#ffffff; --muted:#dcdcdc; --line:#828282; --accent:#3dff2a; --btn-bg:#3dff2a; --btn-fg:#1a1a1a; --head-font:'Cormorant Garamond', Garamond, serif; --body-font:Inter, system-ui, sans-serif; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { background: var(--bg); color: var(--fg); font-family: var(--body-font); font-weight: 400; line-height: 1.6; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  h2 { font-family: var(--head-font); font-weight: 400; font-size: 0.85rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+  p + p { margin-top: 12px; }
+  a { color: var(--fg); }
+  .hero { min-height: 92vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 48px 0; }
+  dl { display: grid; grid-template-columns: 6.5rem 1fr; gap: 14px 16px; }
+  dt { color: var(--muted); font-size: 0.85rem; padding-top: 2px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .note { margin-top: 24px; color: var(--muted); }
+  .btn { display: inline-block; margin-top: 8px; padding: 14px 26px; background: var(--btn-bg); color: var(--btn-fg); text-decoration: none; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.8rem; }
+  .btn:hover { opacity: 0.85; }
+  .btn.ghost { background: transparent; color: var(--fg); border: 1px solid var(--fg); }
+  ol { list-style: none; margin-top: 24px; }
+  ol li { display: grid; grid-template-columns: 2.2rem 1fr; column-gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  ol .n { grid-row: span 2; color: var(--accent); font-variant-numeric: tabular-nums; font-size: 0.9rem; padding-top: 2px; }
+  ol .a { color: var(--muted); font-size: 0.85rem; }
+  ol li:last-child .t { color: var(--accent); }
+  footer { padding: 48px 0 64px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; text-align: center; letter-spacing: 0.1em; }
+
+  body { transition: background-color 0.4s, color 0.4s; }
+  .hero-cover { display: none; flex-direction: column; align-items: center; }
+  [data-cover="neworder"] .hero-neworder,
+  [data-cover="joydivision"] .hero-joydivision { display: flex; }
+  [data-cover="neworder"] .hero .l { font-family: var(--head-font); text-transform: uppercase; letter-spacing: 0.3em; padding-left: 0.3em; }
+  [data-cover="neworder"] .hero .l1 { font-size: clamp(1.6rem, 7vw, 2.6rem); }
+  [data-cover="neworder"] .hero .l2 { font-size: clamp(3.2rem, 15vw, 6rem); letter-spacing: 0.22em; padding-left: 0.22em; margin: 4px 0 24px; }
+  [data-cover="neworder"] .hero .rule { width: 72px; height: 3px; background: var(--fg); margin-bottom: 28px; }
+  [data-cover="neworder"] .hero .l3 { font-size: clamp(1.4rem, 6.5vw, 2.4rem); }
+  [data-cover="neworder"] .hero .l4 { font-size: clamp(1.3rem, 6vw, 2.2rem); margin-top: 18px; letter-spacing: 0.2em; }
+  [data-cover="joydivision"] h2 { font-family: 'Turret Road', sans-serif; text-transform: lowercase; letter-spacing: 0.15em; font-size: 1.1rem; }
+  [data-cover="joydivision"] .hero .l1 { font-family: var(--head-font); text-transform: uppercase; letter-spacing: 0.12em; font-size: clamp(1.6rem, 7vw, 2.6rem); }
+  [data-cover="joydivision"] .hero .l2 { font-family: var(--head-font); font-size: clamp(1.5rem, 6vw, 2.2rem); margin: 4px 0 6px; }
+  [data-cover="joydivision"] .hero .l3 { font-family: 'Turret Road', sans-serif; color: var(--accent); font-size: clamp(3rem, 16vw, 6rem); letter-spacing: 0.06em; line-height: 1; }
+
+  .flip {
+    position: fixed; top: 16px; right: 16px; z-index: 10;
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 14px; border: 1px solid var(--fg); background: var(--bg); color: var(--fg);
+    font-family: var(--body-font); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+    cursor: pointer;
+  }
+  .flip .disc {
+    width: 18px; height: 18px; border-radius: 50%;
+    background: radial-gradient(circle, var(--bg) 0 18%, var(--fg) 19% 100%);
+    transition: transform 0.6s;
+  }
+  .flip:hover .disc { transform: rotate(180deg); }
+</style>
+</head>
+<body>
+<button class="flip" type="button" aria-label="Switch album cover"><span class="disc"></span><span class="label">Side B</span></button>
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-cover hero-neworder">
+    <div class="l l1">Pedro's</div>
+    <div class="l l2">50th</div>
+    <div class="rule"></div>
+    <div class="l l3">Substance</div>
+    <div class="l l4">2027</div>
+    </div>
+    <div class="hero-cover hero-joydivision">
+    <div class="l1">Pedro's 50th</div>
+    <div class="l2">1976 - still going</div>
+    <div class="l3">substance</div>
+    </div>
+  </header>
+
+  <section id="save-the-date">
+    <h2>Save the date</h2>
+    <dl>
+      <dt>When</dt><dd>Saturday 23 January 2027<br>Evening</dd>
+      <dt>Where</dt><dd>Adelaide. Details to follow</dd>
+    </dl>
+    <p class="note">I'm turning 50 and I'd love you there. It's an adults' night, so pencil in the babysitter. The proper invitation with all the details is coming soon.</p>
+  </section>
+
+
+  <section id="playlist">
+    <h2>The countdown</h2>
+    <p>50 songs, one a day on Instagram, counting down to my birthday. This is the soundtrack for the night.</p>
+    <p><a class="btn ghost" href="https://music.youtube.com/playlist?list=PLZdzJkUuXNTE">Listen on YouTube Music</a></p>
+    <ol>
+        <li><span class="n">01</span><span class="t">Oh! Sweet Nuthin&#x27;</span><span class="a">The Velvet Underground</span></li>
+        <li><span class="n">02</span><span class="t">Pet Sematary</span><span class="a">Ramones</span></li>
+        <li><span class="n">03</span><span class="t">Transmission</span><span class="a">Joy Division</span></li>
+        <li><span class="n">04</span><span class="t">Zombie</span><span class="a">The Cranberries</span></li>
+        <li><span class="n">05</span><span class="t">A Day In The Life</span><span class="a">The Beatles</span></li>
+        <li><span class="n">06</span><span class="t">Bizarre Love Triangle</span><span class="a">New Order</span></li>
+        <li><span class="n">07</span><span class="t">Love Will Tear Us Apart</span><span class="a">Joy Division</span></li>
+        <li><span class="n">08</span><span class="t">Selfless</span><span class="a">The Strokes</span></li>
+        <li><span class="n">09</span><span class="t">All My Loving</span><span class="a">The Beatles</span></li>
+        <li><span class="n">10</span><span class="t">Fortunate Son</span><span class="a">Creedence Clearwater Revival</span></li>
+        <li><span class="n">11</span><span class="t">God Only Knows</span><span class="a">The Beach Boys</span></li>
+        <li><span class="n">12</span><span class="t">Mr. Brightside</span><span class="a">The Killers</span></li>
+        <li><span class="n">13</span><span class="t">Wish You Were Here</span><span class="a">Pink Floyd</span></li>
+        <li><span class="n">14</span><span class="t">See No Evil</span><span class="a">Television</span></li>
+        <li><span class="n">15</span><span class="t">Cobra</span><span class="a">Geese</span></li>
+        <li><span class="n">16</span><span class="t">Cosmic Dancer</span><span class="a">T. Rex</span></li>
+        <li><span class="n">17</span><span class="t">Alright</span><span class="a">Supergrass</span></li>
+        <li><span class="n">18</span><span class="t">Common People</span><span class="a">Pulp</span></li>
+        <li><span class="n">19</span><span class="t">Beautiful Ones</span><span class="a">Suede</span></li>
+        <li><span class="n">20</span><span class="t">This Charming Man</span><span class="a">The Smiths</span></li>
+        <li><span class="n">21</span><span class="t">Today</span><span class="a">Smashing Pumpkins</span></li>
+        <li><span class="n">22</span><span class="t">Slide</span><span class="a">Goo Goo Dolls</span></li>
+        <li><span class="n">23</span><span class="t">High and Dry</span><span class="a">Radiohead</span></li>
+        <li><span class="n">24</span><span class="t">Alive</span><span class="a">Pearl Jam</span></li>
+        <li><span class="n">25</span><span class="t">Where Is My Mind?</span><span class="a">Pixies</span></li>
+        <li><span class="n">26</span><span class="t">What&#x27;s Up?</span><span class="a">4 Non Blondes</span></li>
+        <li><span class="n">27</span><span class="t">Walkin&#x27; On The Sun</span><span class="a">Smash Mouth</span></li>
+        <li><span class="n">28</span><span class="t">Semi-Charmed Life</span><span class="a">Third Eye Blind</span></li>
+        <li><span class="n">29</span><span class="t">Push</span><span class="a">Matchbox Twenty</span></li>
+        <li><span class="n">30</span><span class="t">Say It Ain&#x27;t So</span><span class="a">Weezer</span></li>
+        <li><span class="n">31</span><span class="t">Bitter Sweet Symphony</span><span class="a">The Verve</span></li>
+        <li><span class="n">32</span><span class="t">Creep</span><span class="a">Radiohead</span></li>
+        <li><span class="n">33</span><span class="t">Coffee &amp; TV</span><span class="a">Blur</span></li>
+        <li><span class="n">34</span><span class="t">One More Time</span><span class="a">blink-182</span></li>
+        <li><span class="n">35</span><span class="t">Knockin&#x27; On Heaven&#x27;s Door</span><span class="a">Bob Dylan</span></li>
+        <li><span class="n">36</span><span class="t">(I Can&#x27;t Get No) Satisfaction</span><span class="a">The Rolling Stones</span></li>
+        <li><span class="n">37</span><span class="t">Smooth Criminal</span><span class="a">Michael Jackson</span></li>
+        <li><span class="n">38</span><span class="t">Sweet Child O&#x27; Mine</span><span class="a">Guns N&#x27; Roses</span></li>
+        <li><span class="n">39</span><span class="t">Listen to the Music</span><span class="a">The Doobie Brothers</span></li>
+        <li><span class="n">40</span><span class="t">Thunderstruck</span><span class="a">AC/DC</span></li>
+        <li><span class="n">41</span><span class="t">All My Love</span><span class="a">Led Zeppelin</span></li>
+        <li><span class="n">42</span><span class="t">Just Like Heaven</span><span class="a">The Cure</span></li>
+        <li><span class="n">43</span><span class="t">Let It Be</span><span class="a">The Beatles</span></li>
+        <li><span class="n">44</span><span class="t">Don&#x27;t Stop Me Now</span><span class="a">Queen</span></li>
+        <li><span class="n">45</span><span class="t">When I Come Around</span><span class="a">Green Day</span></li>
+        <li><span class="n">46</span><span class="t">Should I Stay or Should I Go</span><span class="a">The Clash</span></li>
+        <li><span class="n">47</span><span class="t">Everlong</span><span class="a">Foo Fighters</span></li>
+        <li><span class="n">48</span><span class="t">Disarm</span><span class="a">Smashing Pumpkins</span></li>
+        <li><span class="n">49</span><span class="t">In Bloom (Smart Sessions)</span><span class="a">Nirvana</span></li>
+        <li><span class="n">50</span><span class="t">Don&#x27;t Look Back In Anger</span><span class="a">Oasis</span></li>
+    </ol>
+  </section>
+
+
+  <footer>
+    Substance 1987 &middot; Pedro 2027<br>Forty years on. See you on the 23rd.
+  </footer>
+
+</div>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.querySelector(".flip");
+    var label = btn.querySelector(".label");
+    function render() {
+      label.textContent = root.dataset.cover === "neworder" ? "Flip to Joy Division" : "Flip to New Order";
+    }
+    btn.addEventListener("click", function () {
+      root.dataset.cover = root.dataset.cover === "neworder" ? "joydivision" : "neworder";
+      try { localStorage.setItem("cover", root.dataset.cover); } catch (e) {}
+      render();
+    });
+    render();
+  })();
+</script>
+</body>
+</html>
